@@ -20,7 +20,31 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
-        android:name="com.platzi.cursoandroidudemy.ui.movie.moviedtails.MovieDetailFragment"
         android:label="fragment_movie_detail"
-        tools:layout="@layout/fragment_movie_detail" />
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="posterimageUrl"
+            app:argType="string" />
+        <argument
+            android:name="backgroundImageUrl"
+            app:argType="string" />
+        <argument
+            android:name="voteAverage"
+            app:argType="float" />
+        <argument
+            android:name="voteCount"
+            app:argType="integer" />
+        <argument
+            android:name="overview"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="language"
+            app:argType="string" />
+        <argument
+            android:name="realeaseDate"
+            app:argType="string" />
+    </fragment>
 </navigation>

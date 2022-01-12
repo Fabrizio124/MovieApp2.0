@@ -23,7 +23,7 @@ interface WebService {
 
 object RetrofitClient {
 
-    val webservice: WebService by lazy {
+    val webservice  by lazy {
         Retrofit.Builder()
             .baseUrl(AppConstants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))

@@ -16,6 +16,7 @@ class MovieAdapter(private val moviesList: List<Movie>,
     RecyclerView.Adapter<BaseViewHolder<*>>() {
 
     interface OnMovieClickListener{
+
         fun onMovieClick(movie: Movie)
     }
 

@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/img_background"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             />
 
         <View
@@ -35,7 +35,7 @@
         android:layout_marginBottom="16dp"
         android:clipToPadding="true"
         app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
@@ -48,17 +48,15 @@
 
     </androidx.cardview.widget.CardView>
 
-
-
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="334dp" />
+        app:layout_constraintGuide_begin="333dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txt_movie_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -69,7 +67,7 @@
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Movie Tile" />
 
     <TextView
@@ -104,6 +102,7 @@
         android:id="@+id/txt_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
         android:gravity="center"
         android:layout_marginTop="8dp"
         android:textColor="@color/white"
@@ -111,7 +110,6 @@
         app:drawableTint="@color/white"
         app:layout_constraintStart_toStartOf="@+id/txt_released"
         app:layout_constraintTop_toBottomOf="@+id/txt_released"
-        app:layout_goneMarginTop="8dp"
         tools:text="Language en" />
 
     <LinearLayout
@@ -185,7 +183,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -194,17 +192,17 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
-        android:id="@id/txt_language"
+        android:id="@id/txt_released"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:text="Vamos a buscar las esferas del dragon,
 es el secreto mas estremecedor, vamos a atrapar las esferas del dragon, un milagro increible se esconde ahi, la fantastica aventura va a empezar, este mundo es una gran isla del tesoro.
 Un amor late ardiente en mi pecho hoy, son tan diversos los sueños de cada quien, en algun lugar de la tierra brillan para mi. " />
