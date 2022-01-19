@@ -4,7 +4,7 @@ import com.platzi.cursoandroidudemy.application.AppConstants
 import com.platzi.cursoandroidudemy.repository.WebService
 
 
-class MovieDataSource(private val webService: WebService) {
+class RemoteMovieDataSource(private val webService: WebService) {
 
     suspend fun getUpcomingMovies(): MovieList = webService.getUpcomingMovies(AppConstants.API_KEY)
 

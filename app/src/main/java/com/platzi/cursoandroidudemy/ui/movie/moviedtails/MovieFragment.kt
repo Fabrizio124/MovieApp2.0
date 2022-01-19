@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.ConcatAdapter
 import com.platzi.cursoandroidudemy.R
 import com.platzi.cursoandroidudemy.core.Resource
 import com.platzi.cursoandroidudemy.data.model.remote.Movie
-import com.platzi.cursoandroidudemy.data.model.remote.MovieDataSource
+import com.platzi.cursoandroidudemy.data.model.remote.RemoteMovieDataSource
+import com.platzi.cursoandroidudemy.data.model.remote.local.AppDatabase
+import com.platzi.cursoandroidudemy.data.model.remote.local.LocalMovieDataSource
 import com.platzi.cursoandroidudemy.databinding.FragmentMovieBinding
 import com.platzi.cursoandroidudemy.presentation.MovieViewModel
 import com.platzi.cursoandroidudemy.presentation.MovieViewModelFactory
@@ -28,7 +30,8 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImpl(
-                MovieDataSource(RetrofitClient.webservice)
+                RemoteMovieDataSource(RetrofitClient.webservice),
+                LocalMovieDataSource(AppDatabase.getDatabase(requireContext()).movieDao())
             )
         )
     }
